@@ -2,8 +2,10 @@
 
 Donate plugin for Shopware 6
 
-## Ins
+## Install:
+
+Upload and Install via Plugin Manager
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NzI5MDQ0N119
+eyJoaXN0b3J5IjpbLTE3MDUxNzA2MjFdfQ==
 -->
