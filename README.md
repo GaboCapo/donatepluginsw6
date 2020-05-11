@@ -1,7 +1,6 @@
 # donatepluginsw6
-Donate Plugin for SW6 
 
-
+Donate plugin for Shopware 6
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzgxMzE1ODZdfQ==
+eyJoaXN0b3J5IjpbLTc3MDE2NzE1XX0=
 -->
