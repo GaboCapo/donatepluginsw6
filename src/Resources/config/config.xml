@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Basic Configuration</title>
+        <title lang="de-DE">Grundeinstellungen</title>
+
+        <input-field>
+            <name>email</name>
+            <copyable>true</copyable>
+            <label>eMail address</label>
+            <label lang="de-DE">E-Mail Adresse</label>
+            <placeholder>you@example.com</placeholder>
+            <placeholder lang="de-DE">du@beispiel.de</placeholder>
+            <helpText>Please fill in your personal eMail address</helpText>
+            <helpText lang="de-DE">Bitte trage deine persönliche E-Mail Adresse ein</helpText>
+        </input-field>
+
+        <input-field>
+            <name>disabledInputField</name>
+            <label>This input field is disabled</label>
+            <disabled>1</disabled>
+        </input-field>
+
+        <input-field type="single-select">
+            <name>mailMethod</name>
+            <options>
+                <option>
+                    <id>smtp</id>
+                    <name>English smtp</name>
+                    <name lang="de-DE">German smtp</name>
+                </option>
+                <option>
+                    <id>pop3</id>
+                    <name>English pop3</name>
+                    <name lang="de-DE">German pop3</name>
+                </option>
+            </options>
+            <defaultValue>smtp</defaultValue>
+            <label>Mail method</label>
+            <label lang="de-DE">Versand Protokoll</label>
+        </input-field>
+
+        <input-field type="password">
+            <name>secret</name>
+            <label>Secret token</label>
+            <label lang="de-DE">Geheim Schlüssel</label>
+            <helpText>Your secret token for xyz...</helpText>
+            <helpText lang="de-DE">Dein geheimer Schlüssel für xyz...</helpText>
+        </input-field>
+    </card>
+
+    <card>
+        <title>Advanced Configuration</title>
+        <title lang="de-DE">Erweiterte Einstellungen</title>
+
+        <component name="sw-entity-single-select">
+            <name>exampleProduct</name>
+            <entity>product</entity>
+            <label>Choose a product for the plugin configuration</label>
+        </component>
+
+        <component name="sw-entity-multi-id-select">
+            <name>exampleMultiProductIds</name>
+            <entity>product</entity>
+            <label>Choose multiple products IDs for the plugin configuration</label>
+        </component>
+
+        <component name="sw-media-field">
+            <name>pluginMedia</name>
+            <label>Upload media or choose one from the media manager</label>
+        </component>
+
+        <component name="sw-text-editor">
+            <name>textEditor</name>
+            <label>Write some nice text with WYSIWYG editor</label>
+        </component>
+    </card>
+</config>
