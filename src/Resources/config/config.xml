@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
 
     <card>
-        <title>Basic Configuration</title>
+        <title>donateplugin</title>
         <title lang="de-DE">Grundeinstellungen</title>
 
         <input-field>
@@ -11,7 +11,7 @@
             <copyable>true</copyable>
             <label>eMail address</label>
             <label lang="de-DE">E-Mail Adresse</label>
-            <placeholder>you@example.com</placeholder>
+            <placeholder>gabcapdev@gmail.com</placeholder>
             <placeholder lang="de-DE">du@beispiel.de</placeholder>
             <helpText>Please fill in your personal eMail address</helpText>
             <helpText lang="de-DE">Bitte trage deine persönliche E-Mail Adresse ein</helpText>
