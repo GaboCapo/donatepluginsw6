@@ -1,31 +1,31 @@
 {
-    "name": "swag/plugin-config",
-    "description": "Plugin config example plugin",
-    "version": "1.1.0",
+    "name": "gabcap/donate-plugin",
+    "description": "Donate Plugin",
+    "version": "v0.0.1",
     "type": "shopware-platform-plugin",
     "license": "MIT",
     "authors": [
         {
-            "name": "shopware AG"
+            "name": "gabcap"
         }
     ],
     "require": {
-        "shopware/core": "~6.2.0"
+        "shopware/core": "*"
     },
     "extra": {
-        "shopware-plugin-class": "Swag\\PluginConfig\\PluginConfig",
+        "shopware-plugin-class": "gabcap\\DonatePlugin\\DonatePlugin",
         "label": {
-            "de-DE": "Label für das Plugin PluginConfig",
-            "en-GB": "Label for the plugin PluginConfig"
+            "de-DE": "Spenden Plugin",
+            "en-GB": "Donate Plugin"
         },
         "description": {
-            "de-DE": "Beschreibung für das Plugin PluginConfig",
-            "en-GB": "Description for the plugin PluginConfig"
+            "de-DE": "Deutsche Beschreibung des Plugins",
+            "en-GB": "English description of the plugin"
         }
     },
     "autoload": {
         "psr-4": {
-            "Swag\\PluginConfig\\": "src/"
+            "gabcap\\DonatePlugin\\": "src/"
         }
     }
 }
