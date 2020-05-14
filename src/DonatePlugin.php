@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-namespace gabca\DonatePlugin;
+namespace gabcap\DonatePlugin;
 
 use Shopware\Core\Framework\Context;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityRepositoryInterface;
