@@ -1,6 +1,5 @@
 <?php declare(strict_types=1);
-
-namespace gabcap/donate-plugin;
+namespace gabcap/DonatePlugin;
 
 use Shopware\Core\Framework\Context;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityRepositoryInterface;
@@ -9,7 +8,7 @@ use Shopware\Core\Framework\DataAbstractionLayer\Search\Filter\ContainsFilter;
 use Shopware\Core\Framework\Plugin;
 use Shopware\Core\Framework\Plugin\Context\UninstallContext;
 
-class PluginConfig extends Plugin
+class DonatePlugin extends Plugin
 {
     public function uninstall(UninstallContext $uninstallContext): void
     {
