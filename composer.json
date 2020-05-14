@@ -1,5 +1,5 @@
 {
-    "name": "gabcap/DonatePlugin",
+    "name": "gabcap/donate-plugin",
     "description": "Donate Plugin",
     "version": "v0.0.1",
     "type": "shopware-platform-plugin",
