@@ -4,7 +4,7 @@
 
     <card>
         <title>donateplugin</title>
-        <title lang="de-DE">Grundeinstellungen</title>
+        <title lang="de-DE">Spendenkonfiguration</title>
 
         <input-field>
             <name>email</name>
