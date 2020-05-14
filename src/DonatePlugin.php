@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Swag\PluginConfig;
+namespace gabcap/donate-plugin;
 
 use Shopware\Core\Framework\Context;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityRepositoryInterface;
