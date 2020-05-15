@@ -8,9 +8,9 @@ This donation item can then be seen on all other documents and, like items in th
 
 Configuration:
 
+Assign the sales channel in the plugin configuration, then enter the desired donation value in percent once.
 
-
-The plugin creates a new configuration field in the article details with the name "donation product".
+The plugin creates a new configuration field in the article details with the name "donation product Yes/No".
 
 
 Variant articles are recorded uniformly, which means that if the article is declared as a donation article, the associated variants are also recorded as a donation.
@@ -20,5 +20,6 @@ Variant articles are recorded uniformly, which means that if the article is decl
 Upload and Install via Plugin Manager
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNTU4MTU4MywtMTcwNTE3MDYyMV19
+eyJoaXN0b3J5IjpbLTEyNDA3NzAwNzgsMTQzNTU4MTU4MywtMT
+cwNTE3MDYyMV19
 -->
