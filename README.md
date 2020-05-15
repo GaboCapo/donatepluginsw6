@@ -8,9 +8,10 @@ This donation item can then be seen on all other documents and, like items in th
 
 Configuration:
 
+
+
 The plugin creates a new configuration field in the article details with the name "donation product".
 
-This can be activated so that the product is recorded for a donation calculation.
 
 Variant articles are recorded uniformly, which means that if the article is declared as a donation article, the associated variants are also recorded as a donation.
 
@@ -19,5 +20,5 @@ Variant articles are recorded uniformly, which means that if the article is decl
 Upload and Install via Plugin Manager
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA5MzU4NDg5LC0xNzA1MTcwNjIxXX0=
+eyJoaXN0b3J5IjpbMTQzNTU4MTU4MywtMTcwNTE3MDYyMV19
 -->
