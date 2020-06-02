@@ -236,7 +236,7 @@ class DonateCartProcessor implements CartProcessorInterface, CartDataCollectorIn
 
             case self::DISCOUNT_TYPE_PERCENTAGE:
                 $priceDefinition = new PercentagePriceDefinition($donateData->getDiscount() * -1, $context->getContext()->getCurrencyPrecision());
-                $label = sprintf('Percental donate voucher (%s%%)', $donateData->getDiscount());
+                $label = sprintf('Spendenwert', $donateData->getDiscount());
                 break;
 
             default:
