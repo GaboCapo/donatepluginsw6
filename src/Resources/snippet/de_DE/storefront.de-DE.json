@@ -3,7 +3,7 @@
         "detail": {
             "donateBadge": "Spendenprodukt",
             "tabText": "Spendenprodukt",
-            "buyButtonText": "Kaufen Sie dieses Produkt und Spenden Sie %donateDiscount%"
+            "buyButtonText": "Kaufen Sie dieses Produkt und spenden Sie %donateDiscount%"
         }
     }
 }
