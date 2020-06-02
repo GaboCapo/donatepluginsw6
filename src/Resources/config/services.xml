@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    
+    <services>
+        <service id="Gabcap\DonateExample\Core\Content\Product\ProductExtension">
+            <tag name="shopware.entity.extension"/>
+        </service>
+
+        <service id="Gabcap\DonateExample\Core\Content\Donate\DonateDefinition">
+            <tag name="shopware.entity.definition" entity="gabcap_donate" />
+        </service>
+
+        <service id="Gabcap\DonateExample\Core\Content\Donate\Aggregate\DonateTranslation\DonateTranslationDefinition">
+            <tag name="shopware.entity.definition" entity="gabcap_donate_translation" />
+        </service>
+
+        <service id="Gabcap\DonateExample\Core\Content\Donate\Aggregate\DonateProduct\DonateProductDefinition">
+            <tag name="shopware.entity.definition" entity="gabcap_donate_product"/>
+        </service>
+
+        <service id="Gabcap\DonateExample\Core\Content\Donate\Command\DonateDemoCommand">
+            <argument type="service" id="gabcap_donate.repository"/>
+            <argument type="service" id="product.repository"/>
+            <tag name="console.command"/>
+        </service>
+
+        <service id="Gabcap\DonateExample\Core\Checkout\Donate\Cart\DonateCartProcessor">
+            <argument type="service" id="gabcap_donate.repository"/>
+            <argument type="service" id="Shopware\Core\Checkout\Cart\Price\PercentagePriceCalculator"/>
+            <argument type="service" id="Shopware\Core\Checkout\Cart\Price\AbsolutePriceCalculator"/>
+            <argument type="service" id="Shopware\Core\Checkout\Cart\Price\QuantityPriceCalculator"/>
+
+            <!-- inject before product processor (5000) -->
+            <tag name="shopware.cart.processor" priority="6000" />
+            <tag name="shopware.cart.collector" priority="6000" />
+        </service>
+
+        <service id="Gabcap\DonateExample\Storefront\Page\Product\Subscriber\ProductPageCriteriaSubscriber">
+            <tag name="kernel.event_subscriber"/>
+        </service>
+
+        <service id="Gabcap\DonateExample\Resources\snippet\en_GB\SnippetFile_en_GB">
+            <tag name="shopware.snippet.file" priority="100"/>
+        </service>
+
+        <service id="Gabcap\DonateExample\Resources\snippet\de_DE\SnippetFile_de_DE">
+            <tag name="shopware.snippet.file" priority="100"/>
+        </service>
+
+        <service id="Gabcap\DonateExample\Core\Checkout\Donate\Cart\Rule\CartContainsDonateRule">
+            <tag name="shopware.rule.definition"/>
+        </service>
+    </services>
+</container>

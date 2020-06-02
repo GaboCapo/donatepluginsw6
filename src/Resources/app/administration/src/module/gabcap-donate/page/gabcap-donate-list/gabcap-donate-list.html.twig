@@ -1,0 +1,24 @@
+{% block gabcap_donate_list %}
+    <sw-page class="gabcap-donate-list">
+        {% block gabcap_donate_list_smart_bar_actions %}
+            <template slot="smart-bar-actions">
+                <sw-button variant="primary" :routerLink="{ name: 'gabcap.donate.create' }">
+                    {{ $t('gabcap-donate.list.addButtonText') }}
+                </sw-button>
+            </template>
+        {% endblock %}
+
+        <template slot="content">
+            {% block gabcap_donate_list_content %}
+                <sw-entity-listing
+                    v-if="donates"
+                    :items="donates"
+                    :repository="repository"
+                    :showSelection="false"
+                    :columns="columns"
+                    detailRoute="gabcap.donate.detail">
+                </sw-entity-listing>
+            {% endblock %}
+        </template>
+    </sw-page>
+{% endblock %}

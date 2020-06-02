@@ -1,0 +1,41 @@
+{
+    "gabcap-donate": {
+        "general": {
+            "mainMenuItemGeneral": "Donate",
+            "descriptionTextModule": "Verwalte die Donates hier"
+        },
+        "list": {
+            "addButtonText": "Donate hinzufügen",
+            "columnName": "Name",
+            "columnDiscountType": "Rabatt Typ",
+            "columnDiscount": "Rabatt"
+        },
+        "detail": {
+            "nameLabel": "Name",
+            "discountLabel": "Rabatt",
+            "discountTypeLabel": "Rabatt Typ",
+            "assignProductsLabel": "Produkte zuweisen",
+            "cancelButtonText": "Abbrechen",
+            "saveButtonText": "Speichern",
+            "errorTitle": "Fehler beim Speichern des Donates",
+            "absoluteText": "Absolut",
+            "percentageText": "Prozentual"
+        }
+    },
+
+    "sw-product": {
+        "detail": {
+            "donateCardLabel": "Donates",
+            "donateSelectLabel": "Zugewiesene Donates",
+            "donateSelectPlaceholder": "Donate hinzufügen..."
+        }
+    },
+
+    "sw-condition": {
+        "condition": {
+            "cartContainsDonate": {
+                "label": "Warenkorb enthält Donate"
+            }
+        }
+    }
+}

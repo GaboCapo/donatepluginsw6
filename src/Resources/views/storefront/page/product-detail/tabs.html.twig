@@ -1,0 +1,60 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/tabs.html.twig' %}
+
+{% block page_product_detail_tabs_navigation_description %}
+    {{ parent() }}
+    {% if page.product.extension('donates').elements|length > 0 %}
+        <li class="nav-item">
+            <a class="nav-link" id="donate-tab" data-toggle="tab" data-offcanvas-tab="true" href="#donate-tab-pane" role="tab" aria-controls="donate-tab-pane" aria-selected="false">
+                <span>{{ 'gabcap-donate.detail.tabText'|trans }}</span>
+            </a>
+        </li>
+    {% endif %}
+{% endblock %}
+
+{% block page_product_detail_tabs_content_description %}
+    {{ parent() }}
+    {% if page.product.extension('donates').elements|length > 0 %}
+        <div class="tab-pane fade"
+             id="donate-tab-pane"
+             role="tabpanel"
+             aria-labelledby="donate-tab">
+
+            <div class="container donate-container">
+                {% for donate in page.product.extension('donates').elements %}
+                    <h2>{{ donate.name }}</h2>
+
+                    <div class="row">
+                        {% for product in donate.products.elements %}
+                            <div class="col-4">
+                                {% sw_include '@Storefront/storefront/component/product/card/box-standard.html.twig' with {'product': product} %}
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="row justify-content-md-center">
+                        <form action="{{ path('frontend.checkout.line-item.add') }}"
+                            method="post"
+                            class="buy-widget js-add-to-cart"
+                            data-form-csrf-handler="true"
+                            data-add-to-cart="true">
+                            <div class="form-row buy-widget-container">
+                                <button class="btn btn-primary btn-block buy-widget-submit" style="margin-top: 10px;">
+                                    {{ 'gabcap-donate.detail.buyButtonText'|trans({ '%donateDiscount%': donate.discountType == 'absolute' ? donate.discount|currency : (donate.discount ~ '%') }) }}
+                                </button>
+
+                                <input type="hidden" name="lineItems[{{ donate.id }}][id]" value="{{ donate.id }}">
+                                <input type="hidden" name="lineItems[{{ donate.id }}][type]" value="gabcapdonate">
+                                <input type="hidden" name="lineItems[{{ donate.id }}][quantity]" value="1">
+                                <input type="hidden" name="lineItems[{{ donate.id }}][referencedId]" value="{{ donate.id }}">
+                                <input type="hidden" name="redirectTo" value="frontend.cart.offcanvas"/>
+
+                                {{ sw_csrf('frontend.checkout.line-item.add') }}
+                            </div>
+                        </form>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+

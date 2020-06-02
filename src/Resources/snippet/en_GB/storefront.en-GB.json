@@ -1,0 +1,9 @@
+{
+    "gabcap-donate": {
+        "detail": {
+            "donateBadge": "Donate",
+            "tabText": "Donate",
+            "buyButtonText": "Buy donate and save %donateDiscount%"
+        }
+    }
+}
