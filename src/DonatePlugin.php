@@ -1,41 +1,35 @@
 <?php declare(strict_types=1);
-namespace gabcap\DonatePlugin;
 
-use Shopware\Core\Framework\Context;
-use Shopware\Core\Framework\DataAbstractionLayer\EntityRepositoryInterface;
-use Shopware\Core\Framework\DataAbstractionLayer\Search\Criteria;
-use Shopware\Core\Framework\DataAbstractionLayer\Search\Filter\ContainsFilter;
+namespace Gabcap\DonatePlugin;
+
+use Doctrine\DBAL\Connection;
+use Shopware\Core\Framework\DataAbstractionLayer\Indexing\Indexer\InheritanceIndexer;
+use Shopware\Core\Framework\DataAbstractionLayer\Indexing\MessageQueue\IndexerMessageSender;
 use Shopware\Core\Framework\Plugin;
+use Shopware\Core\Framework\Plugin\Context\ActivateContext;
 use Shopware\Core\Framework\Plugin\Context\UninstallContext;
 
 class DonatePlugin extends Plugin
 {
-    public function uninstall(UninstallContext $uninstallContext): void
+    public function activate(ActivateContext $activateContext): void
     {
-        parent::uninstall($uninstallContext);
-
-        if ($uninstallContext->keepUserData()) {
-            return;
-        }
-
-        $this->removeConfiguration($uninstallContext->getContext());
+        $indexerMessageSender = $this->container->get(IndexerMessageSender::class);
+        $indexerMessageSender->partial(new \DateTimeImmutable(), [InheritanceIndexer::getName()]);
     }
 
-    private function removeConfiguration(Context $context): void
+    public function uninstall(UninstallContext $context): void
     {
-        /** @var EntityRepositoryInterface $systemConfigRepository */
-        $systemConfigRepository = $this->container->get('system_config.repository');
-        $criteria = (new Criteria())->addFilter(new ContainsFilter('configurationKey', $this->getName() . '.config.'));
-        $idSearchResult = $systemConfigRepository->searchIds($criteria, $context);
+        parent::uninstall($context);
 
-        $ids = array_map(static function ($id) {
-            return ['id' => $id];
-        }, $idSearchResult->getIds());
-
-        if ($ids === []) {
+        if ($context->keepUserData()) {
             return;
         }
 
-        $systemConfigRepository->delete($ids, $context);
+        $connection = $this->container->get(Connection::class);
+
+        $connection->executeUpdate('DROP TABLE IF EXISTS `swag_bundle_product`');
+        $connection->executeUpdate('DROP TABLE IF EXISTS `swag_bundle_translation`');
+        $connection->executeUpdate('DROP TABLE IF EXISTS `swag_bundle`');
+        $connection->executeUpdate('ALTER TABLE `product` DROP COLUMN `bundles`');
     }
 }
