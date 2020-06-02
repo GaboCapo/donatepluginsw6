@@ -12,9 +12,9 @@
         },
         "detail": {
             "nameLabel": "Name",
-            "discountLabel": "Spende",
+            "discountLabel": "Spendenwert",
             "discountTypeLabel": "Spenden Typ",
-            "assignProductsLabel": "Produkte zuweisen",
+            "assignProductsLabel": "Spendenprodukt auswählen",
             "cancelButtonText": "Abbrechen",
             "saveButtonText": "Speichern",
             "errorTitle": "Fehler beim Speichern des Spende",
