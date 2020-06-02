@@ -1,40 +1,40 @@
 {
     "gabcap-donate": {
         "general": {
-            "mainMenuItemGeneral": "Donate",
-            "descriptionTextModule": "Verwalte die Donates hier"
+            "mainMenuItemGeneral": "Spenden",
+            "descriptionTextModule": "Verwalte die Spenden hier"
         },
         "list": {
-            "addButtonText": "Donate hinzufügen",
+            "addButtonText": "Spende hinzufügen",
             "columnName": "Name",
-            "columnDiscountType": "Rabatt Typ",
-            "columnDiscount": "Rabatt"
+            "columnDiscountType": "Spenden Typ",
+            "columnDiscount": "Spendenwert"
         },
         "detail": {
             "nameLabel": "Name",
-            "discountLabel": "Rabatt",
-            "discountTypeLabel": "Rabatt Typ",
+            "discountLabel": "Spende",
+            "discountTypeLabel": "Spenden Typ",
             "assignProductsLabel": "Produkte zuweisen",
             "cancelButtonText": "Abbrechen",
             "saveButtonText": "Speichern",
-            "errorTitle": "Fehler beim Speichern des Donates",
+            "errorTitle": "Fehler beim Speichern des Spende",
             "absoluteText": "Absolut",
-            "percentageText": "Prozentual"
+            "percentageText": "Prozentual in %"
         }
     },
 
     "sw-product": {
         "detail": {
-            "donateCardLabel": "Donates",
-            "donateSelectLabel": "Zugewiesene Donates",
-            "donateSelectPlaceholder": "Donate hinzufügen..."
+            "donateCardLabel": "Spenden",
+            "donateSelectLabel": "Zugewiesene Spenden",
+            "donateSelectPlaceholder": "Spende hinzufügen..."
         }
     },
 
     "sw-condition": {
         "condition": {
             "cartContainsDonate": {
-                "label": "Warenkorb enthält Donate"
+                "label": "Warenkorb enthält Spende"
             }
         }
     }
