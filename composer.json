@@ -1,8 +1,7 @@
 {
-    "name": "gabcap/donate-plugin",
-    "description": "Donate Plugin",
-    "version": "v0.0.1",
-    "type": "shopware-platform-plugin",
+    "name": "gabcap/donate",
+    "description": "Donate",
+    "version": "v1.0.0",
     "license": "MIT",
     "authors": [
         {
@@ -10,22 +9,26 @@
         }
     ],
     "require": {
-        "shopware/core": "*"
+        "shopware/core": "*",
+        "shopware/administration": "*",
+        "shopware/storefront": "*"
+    },
+    "type": "shopware-platform-plugin",
+    "autoload": {
+        "psr-4": {
+            "Gabcap\\DonateExample\\": "src/"
+        }
     },
     "extra": {
-        "shopware-plugin-class": "gabcap\\DonatePlugin\\DonatePlugin",
+        "shopware-plugin-class": "Gabcap\\DonateExample\\DonateExample",
+        "copyright": "gabcap",
         "label": {
-            "de-DE": "Spenden Plugin",
-            "en-GB": "Donate Plugin"
+            "de-DE": "Spenden",
+            "en-GB": "Donatations"
         },
         "description": {
             "de-DE": "Deutsche Beschreibung des Plugins",
             "en-GB": "English description of the plugin"
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "gabcap\\DonatePlugin\\": "src/"
         }
     }
 }
