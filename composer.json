@@ -27,8 +27,8 @@
             "en-GB": "Donatations"
         },
         "description": {
-            "de-DE": "Deutsche Beschreibung des Plugins",
-            "en-GB": "English description of the plugin"
+            "de-DE": "Spendenplugin \n\nEs können verschiedene Spenden getätigt werden.\n\nAusgewählte Produkte können als Spendenprodukte gekennzeichnet werden. Hier wird in der Plugin-Konfiguration ein Prozentsatz eingegeben, der den Spendenwert als separaten Artikel im Warenkorb basierend auf dem Nettopreis der Produkte im Warenkorb enthält.\n\nDieser Spendenartikel ist dann in allen anderen Dokumenten sichtbar und kann wie Artikel in den Bestellungen auch später vom Administrator bearbeitet werden.",
+            "en-GB": "Donate plugin \n\nDifferent donations can be made.\n\nSelected products can be marked as donation products. Here, a percentage is entered in the plugin configuration, which contains the donation value as a separate item in the shopping cart based on the net price of the products in the shopping cart.\n\nThis donation item is then visible on all other documents and, like items in the orders, can also be edited later by the administrator.\n"
         }
     }
 }
