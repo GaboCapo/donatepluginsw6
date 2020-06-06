@@ -23,14 +23,6 @@
                 {% for donate in page.product.extension('donates').elements %}
                     <h2>{{ donate.name }}</h2>
 
-                    <div class="row">
-                        {% for product in donate.products.elements %}
-                            <div class="col-4">
-                                {% sw_include '@Storefront/storefront/component/product/card/box-standard.html.twig' with {'product': product} %}
-                            </div>
-                        {% endfor %}
-                    </div>
-
                     <div class="row justify-content-md-center">
                         <form action="{{ path('frontend.checkout.line-item.add') }}"
                             method="post"
